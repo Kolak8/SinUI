@@ -1,4 +1,5 @@
-console.log('hi4')
-const div = document.createElement('div')
-div.innerHTML = 'hi'
-document.body.appendChild(div)
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+console.log(React);
+console.log(ReactDOM);
