@@ -1,9 +1,7 @@
 const path = require('path')  //node 的文件路径模块，为了兼容入口路径
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //自动添加一个html文件
-
 
 module.exports = {
-    mode: 'development',
+    // mode: 'development',
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
@@ -23,12 +21,12 @@ module.exports = {
             }
         ]
     },
-    plugins: [
+/*     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html' // 原来的html文件
         })
-    ],
-    externals: {
+    ], */
+/*     externals: {
         react: { // 配置依赖的名称
             commonjs: 'react',
             commonjs2: 'react',
@@ -41,5 +39,5 @@ module.exports = {
             amd: 'react-dom',
             root: 'ReactDOM'
         }
-    }
+    } */
 }

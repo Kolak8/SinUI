@@ -1,8 +1,10 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+// import * as React from 'react';
+// import * as ReactDOM from 'react-dom';
 import Button from './button';
 
-ReactDOM.render(
-    <Button></Button>,
-    document.getElementById('root')
-)
+// ReactDOM.render(
+//     <Button></Button>,
+//     document.getElementById('root')
+// )
+
+export {Button};
