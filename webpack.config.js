@@ -3,7 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); //自动添加一个ht
 
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx']
+    },
     entry: {
         SinUI: './lib/index.tsx' //兼容入口路径
     },
@@ -24,5 +27,19 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'index.html' // 原来的html文件
         })
-    ]
+    ],
+    externals: {
+        react: { // 配置依赖的名称
+            commonjs: 'react',
+            commonjs2: 'react',
+            amd: 'react',
+            root: 'React',
+        },
+        'react-dom': {
+            commonjs: 'react-dom',
+            commonjs2: 'react-dom',
+            amd: 'react-dom',
+            root: 'ReactDOM'
+        }
+    }
 }
